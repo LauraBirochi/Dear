@@ -1,0 +1,146 @@
+@keyframes animacao {
+    0% {
+        box-shadow: 0px 4px 50px #F7F77B
+    }
+
+    100% {
+        box-shadow: 0px 3px 40px #1DFFB1
+    }
+}
+
+
+body {
+    margin: 0;
+}
+
+.tela {
+    display: flex;
+    background: #2E6B3E;
+    /*background: #2a6cde;*/
+}
+
+.left {
+    display: flex;
+    background: transparent;
+    width: 50vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-img {
+    width: 30vw;
+}
+
+.left>h1 {
+    font-size: 1cm;
+    font-family: cursive;
+    margin: 0;
+    color: #66F28B;
+
+}
+
+.left>h3 {
+    font-family: cursive;
+    color: #66F28B;
+    margin: 0;
+}
+
+.right {
+    width: 50vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.card {
+    width: 45%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #357c48c9;
+    /*background: #de9e28;*/
+    border-radius: 23px;
+    animation-name: animacao;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.form {
+    display: grid;
+}
+
+.card>h1 {
+    text-decoration: underline;
+    text-align: center;
+    font-family: Georgia;
+    font-weight: bold;
+    letter-spacing: 1mm;
+    color: #66F28B;
+}
+
+.divplace {
+    font-size: large;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #66F28B;
+}
+
+
+.divplace>input {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: #357446;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 300ms ease-in-out;
+}
+
+.divplace>input:focus {
+    background-color: rgba(255, 255, 255, 0.76);
+    transform: scale(1.05);
+}
+
+.button {
+    cursor: pointer;
+    background-color: transparent;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #66F28B;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #66F28B;
+}
+
+button:hover {
+    color: #66F28B;
+    transform: scale(1.1);
+    outline: 2px solid #66F28B;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+button:hover::before {
+    width: 250%;
+}
